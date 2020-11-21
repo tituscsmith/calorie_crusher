@@ -59,7 +59,8 @@ handlePress(){
 render(){
   return (//onDateChange={setDate}
     <React.Fragment>
-    <CCHeader />
+    <CCHeader accessibilityLabel="Add Activity Screen"
+    accessibilityRole = "header" navigation = {this.props.navigation} title = "Add an Activity" />
     <View style = {styles.container}
     accessibilityActions={[
       { name: 'gohome', label: 'Return to Today Screen' }
@@ -108,7 +109,7 @@ render(){
           accessibleValue = {this.state.calories}
           // style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
           onChangeText={text => this.setState({calories: text})}
-          placeholder = {this.state.calories.toString() + " minutes"}
+          placeholder = {this.state.calories.toString() + " calories"}
           ref={input => { this.calorieInput = input }}
           />
           <View style = {styles.spaceVertical}></View>

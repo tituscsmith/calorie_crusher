@@ -135,7 +135,7 @@ render(){
           accessibilityHint="Update number of calories burned for activity"
           accessibleValue = {this.props.route.params.duration}
           onChangeText={text => this.setState({calories: text})}
-          placeholder = {this.props.route.params.calories.toString()  + " minutes"}
+          placeholder = {this.props.route.params.calories.toString()  + " calories"}
           />
           <Text>Activity Date</Text><DateTimePicker
           style = {styles.timeinput}

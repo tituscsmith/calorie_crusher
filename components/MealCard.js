@@ -43,8 +43,11 @@ foodDetails(){
   }
   else{
     // console.log("more than 0 foods");
-    return <React.Fragment><Text>{this.getCalories()} calories</Text>
-  <Text>{this.getCarbs()} grams of carbs, {this.getFat()} grams of fat, {this.getProtein()} grams of protein</Text></React.Fragment>
+  //   return <React.Fragment><Text>{this.getCalories()} calories</Text>
+  // <Text>{this.getCarbs()} grams of carbs, {this.getFat()} grams of fat, {this.getProtein()} grams of protein</Text>
+  // </React.Fragment>
+  return <React.Fragment><Text>{this.getCalories()} calories</Text>
+  </React.Fragment>
   }
 
 }

@@ -115,13 +115,13 @@ render(){
         />
 
         <View style = {{flexDirection: 'row', marginTop: 10}}>
-
-        <Button title = "Go Back" accessibilityHint="Press to return to Today Screen"
-        accessibleRole = "button" onPress = {() =>   this.props.navigation.navigate('Today')}></Button>
-        <View style = {styles.spaceHorizontal}></View>
         <Button title = "Save Information" accessibilityHint="Press to Save Profile Information"
         accessibleRole = "button"
         onPress = {() => this.handleSave()}></Button>  
+        <View style = {styles.spaceHorizontal}></View>
+        <Button title = "Go Back" accessibilityHint="Press to return to Today Screen"
+        accessibleRole = "button" onPress = {() =>   this.props.navigation.navigate('Today')}></Button>
+  
         </View>
 
 </View>
