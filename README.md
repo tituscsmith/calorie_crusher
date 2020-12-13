@@ -5,20 +5,23 @@ Created a fitness and meal tracking mobile app with React Native in tangent with
   <tr>
     <td>Login_Screen</td>
      <td>Today_Screen</td>
-     <td>Add_ActivityScreen</td>
   </tr>
   <tr>
     <td><img src="Screenshots/Login_Screen.PNG" width=270 height=560></td>
     <td><img src="Screenshots/Today_Screen.PNG" width=270 height=560></td>
-    <td><img src="Screenshots/Add_ActivityScreen.PNG" width=270 height=560></td>
+  </tr>
+    <tr> <td>Add_ActivityScreen</td>
+        <td>Edit_MealScreen</td>
+    </tr>
+
+  <tr>    <td><img src="Screenshots/Add_ActivityScreen.PNG" width=270 height=560></td>
+      <td><img src="Screenshots/Edit_FoodScreen.PNG" width=270 height=560></td>
   </tr>
   <tr>
-    <td>Edit_FoodScreen</td>
      <td>Edit_MealScreen</td>
      <td>Profile_Screen</td>
   </tr>
   <tr>
-    <td><img src="Screenshots/Edit_FoodScreen.PNG" width=270 height=560></td>
     <td><img src="Screenshots/Edit_MealScreen.PNG" width=270 height=560></td>
     <td><img src="Screenshots/Profile_Screen.PNG" width=270 height=560></td>
   </tr>
@@ -30,9 +33,7 @@ Created a fitness and meal tracking mobile app with React Native in tangent with
   </tr>
  </table>
 
-# CS639 React Native
-
-## Fitness/Tracking API
+## CS639 Fitness/Tracking API
 
 The following API can be accessed at `https://mysqlcs639.cs.wisc.edu`
 
