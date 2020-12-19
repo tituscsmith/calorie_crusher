@@ -12,7 +12,8 @@ render(){
   return (
 
     <View accessibilityLabel="Hold activity to modify" 
-    style={{width: 400, alignItems: 'center', marginBottom: 7, marginTop: 7, borderColor: '#5EA9F4', borderWidth: 2}} onStartShouldSetResponder= {() =>
+    style={{width: 400, alignItems: 'center', maxWidth: 300, marginBottom: 7, marginTop: 7, borderColor: '#5EA9F4', borderWidth: 2}} 
+    onStartShouldSetResponder= {() =>
         this.props.navigation.navigate('Exercise', {id: this.props.id, name: this.props.name, 
           duration: this.props.duration, updateExercise: this.props.updateExercise, 
           deleteExercise: this.props.deleteExercise, date: this.props.date.toLocaleString(), calories: this.props.calories})}>

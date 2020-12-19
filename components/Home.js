@@ -4,6 +4,7 @@ import ExerciseScreen from './ExerciseScreen';
 import FoodScreen from './FoodScreen';
 import MealScreen from './MealScreen';
 import NewFoodScreen from './NewFoodScreen';
+import GoalScreen from './GoalScreen';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import {
@@ -37,6 +38,7 @@ constructor(props){
         <Stack.Screen name="Meal">{props => <MealScreen {...props} token = {this.props.token}/>}</Stack.Screen> 
         <Stack.Screen name="ExistingFood">{props => <FoodScreen {...props}/>}</Stack.Screen> 
         <Stack.Screen name="NewFood">{props => <NewFoodScreen {...props}/>}</Stack.Screen> 
+        <Stack.Screen name="Goals">{props => <GoalScreen {...props}/>}</Stack.Screen> 
 
         </Stack.Navigator>
   );

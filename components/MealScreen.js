@@ -261,7 +261,7 @@ render(){
 
           <Text style = {{fontWeight: "500"}} >Meal Nutritional Details:</Text>
           <Text >{this.state.totalCals} Calories</Text>
-          <Text>{this.state.totalCarbs} grams of carbs, {this.state.totalFat} grams of fat, {this.state.totalProtein} grams of protein</Text>
+          <Text>Carbs: {this.state.totalCarbs} (g), Fat: {this.state.totalFat} (g), Protein: {this.state.totalProtein} (g)</Text>
         <View style = {styles.spaceVertical}></View>
           <View>{this.getFoods()}</View>
             

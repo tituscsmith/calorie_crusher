@@ -7,29 +7,31 @@ Created a fitness and meal tracking mobile app with React Native in tangent with
      <td>Today_Screen</td>
   </tr>
   <tr>
-    <td><img src="Screenshots/Login_Screen.PNG" width=270 height=560></td>
-    <td><img src="Screenshots/Today_Screen.PNG" width=270 height=560></td>
+    <td><img src="Screenshots/Login_Screen.PNG" width=370 height=800></td>
+    <td><img src="Screenshots/Today_Screen.PNG" width=370 height=800></td>
   </tr>
     <tr> <td>Add_ActivityScreen</td>
         <td>Edit_MealScreen</td>
     </tr>
 
-  <tr>    <td><img src="Screenshots/Add_ActivityScreen.PNG" width=270 height=560></td>
-      <td><img src="Screenshots/Edit_FoodScreen.PNG" width=270 height=560></td>
+  <tr>    <td><img src="Screenshots/Add_ActivityScreen.PNG" width=370 height=800></td>
+      <td><img src="Screenshots/Edit_FoodScreen.PNG" width=370 height=800></td>
   </tr>
   <tr>
      <td>Edit_MealScreen</td>
      <td>Profile_Screen</td>
   </tr>
   <tr>
-    <td><img src="Screenshots/Edit_MealScreen.PNG" width=270 height=560></td>
-    <td><img src="Screenshots/Profile_Screen.PNG" width=270 height=560></td>
+    <td><img src="Screenshots/Edit_MealScreen.PNG" width=370 height=800></td>
+    <td><img src="Screenshots/Profile_Screen.PNG" width=370 height=800></td>
   </tr>
   <tr>
+    <td>Goal_Screen</td>
     <td>Drawers_Navigation</td>
   </tr>
   <tr>
-    <td><img src="Screenshots/Drawers.PNG" width=270 height=560></td>
+        <td><img src="Screenshots/Goal_Screen.PNG" width=370 height=800></td>
+    <td><img src="Screenshots/Drawers.PNG" width=370 height=800></td>
   </tr>
  </table>
 

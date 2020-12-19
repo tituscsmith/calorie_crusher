@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet, TextInput, Text, Button, View, ScrollView} from 'react-native';
-import ActivityCard from "./ExerciseCard";
+import ExerciseCard from "./ExerciseCard";
 import MealCard from "./MealCard";
+import GoalCard from "./GoalCard";
+
 // import { Header } from 'react-native-elements';
 import CCHeader from './CCHeader';
 import { Icon } from 'react-native-elements'
@@ -158,7 +160,7 @@ deleteMeal(id){
           if (arr.hasOwnProperty(key)) {     
                 var activityDate = new Date(arr[key].date);
                 if(activityDate.toDateString()===currentDate.toDateString()){
-                  activities.push(<ActivityCard key = {counter} navigation = {this.props.navigation} deleteExercise = {(id) => this.deleteExercise(id)} updateExercise = {(id, name, duration, calories, date) => this.updateExercise(id, name, duration, calories, date)} name = {arr[key].name} id = {arr[key].id} duration = {arr[key].duration} date = {arr[key].date} calories = {arr[key].calories}  /> )
+                  activities.push(<ExerciseCard key = {counter} navigation = {this.props.navigation} deleteExercise = {(id) => this.deleteExercise(id)} updateExercise = {(id, name, duration, calories, date) => this.updateExercise(id, name, duration, calories, date)} name = {arr[key].name} id = {arr[key].id} duration = {arr[key].duration} date = {arr[key].date} calories = {arr[key].calories}  /> )
                 }
                 counter++;
           }
@@ -196,7 +198,6 @@ deleteMeal(id){
     if(goal===0 || progress === 0){
       return "0";
     }
-    // console.log()
     let percentage = (progress/ goal) *100;
     let formatted = percentage.toString().substring(0,4)
     return formatted;
@@ -217,9 +218,6 @@ supplementalMealMessage(){
     return "(Click to Edit)"
   }
 }
-getTodaysDate(){
-  
-}
   render(){
   return (  // {this.getActivities()}
   <ScrollView>
@@ -227,11 +225,6 @@ getTodaysDate(){
   <CCHeader navigation = {this.props.navigation} title = {"Home"} />
   <View style={{padding: 10, alignItems: 'center', 'textAlign': 'center'}}>
   <Icon reverse name='ios-bicycle' type='ionicon' color= '#C400FF' />
-
-  <Text style = {{fontWeight: "700", fontSize: 20}}>Today's Exercise Progress</Text>
-  <Text  style = {{fontWeight: "500"}}>Goal</Text>
-
-  <Text style = {{color: '#5EA9F4', fontWeight: "700"}}>{this.props.todaysActivity} minutes out of {this.props.goalDailyActivity}: {this.calculatePercentage(this.props.todaysActivity, this.props.goalDailyActivity)}%</Text>
   </View>
   <View style = {styles.spaceVertical}></View>
 
@@ -240,19 +233,16 @@ getTodaysDate(){
         <Text style = {{fontStyle: 'italic'}}>{this.supplementalExerciseMessage()}</Text>
 
         {this.getActivities()}</View>
+
+        
         <View style={{padding: 10, alignItems: 'center', 'textAlign': 'center'}}>
+        <GoalCard navigation = {this.props.navigation} totalCalories = {this.state.totalCalories} goalCalories = {this.props.goalDailyCalories} totalActivity = {this.props.todaysActivity} goalActivity = {this.props.goalDailyActivity}
+        totalCarbs = {this.state.totalCarbs} goalCarbs = {this.props.goalDailyCarbohydrates} totalFat = {this.state.totalFat} goalFat = {this.props.goalDailyFat} totalProtein = {this.state.totalProtein} goalProtein = {this.props.goalDailyProtein}></GoalCard>
+        
           <Icon reverse name='ios-pizza' type='ionicon' color= '#C400FF'/>
         </View>
         
         <View style={{padding: 10, alignItems: 'center', 'textAlign': 'center'}}>
-        <Text style = {{fontWeight: "700", fontSize: 20}} >Today's Meal Progress</Text>
-        <Text  style = {{fontWeight: "500"}}>Goals</Text>
-
-        <Text  style = {{color: '#5EA9F4', fontWeight: "700"}}>Calories: {this.state.totalCalories}/{this.props.goalDailyCalories}: {this.calculatePercentage(this.state.totalCalories, this.props.goalDailyCalories)}%</Text>
-        <Text  style = {{color: '#5EA9F4', fontWeight: "700"}}>Carbohydrates {this.state.totalCarbs}/{this.props.goalDailyCarbohydrates}: {this.calculatePercentage(this.state.totalCarbs, this.props.goalDailyCarbohydrates)}%</Text>
-        <Text style = {{color: '#5EA9F4', fontWeight: "700"}}>Fat: {this.state.totalFat}/{this.props.goalDailyFat}: {this.calculatePercentage(this.state.totalFat, this.props.goalDailyFat)}%</Text>
-        <Text  style = {{color: '#5EA9F4', fontWeight: "700"}}>Protein: {this.state.totalProtein}/{this.props.goalDailyProtein}: {this.calculatePercentage(this.state.totalProtein, this.props.goalDailyProtein)}%</Text>
-
         <View  style = {{marginTop: 20, alignItems: 'center',
         justifyContent: 'center'}}><Text style = {{fontWeight: "500", fontSize: 16}}>Today's Meals:</Text>
         <Text style = {{fontStyle: 'italic'}}>{this.supplementalMealMessage()}</Text>

@@ -8,15 +8,16 @@ import ProfileScreen from "./components/ProfileScreen";
 import Home from "./components/Home";
 import NewExerciseScreen from "./components/NewExerciseScreen";
 import NewMealScreen from "./components/NewMealScreen";
-import { LogBox } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import {DrawerContentScrollView,DrawerItemList,DrawerItem} from '@react-navigation/drawer';
-const Drawer = createDrawerNavigator();
 
+import { LogBox } from 'react-native';
 // Handle error
 LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
 ]);
+
+const Drawer = createDrawerNavigator();
 
 const initialState = {
   isLoggedIn: false, username: "", token: "", activities: [], goalDailyCalories: 0.0,
